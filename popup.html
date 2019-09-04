@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <!-- <script src="jquery.min.js"></script> -->
+    </head>
+    <body>
+        <!-- Form General Info -->
+        <div class="request_form_field">
+            <div class="field">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="application[first_name]" aria-required="true">
+            </div>
+            <div class="field">
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="application[last_name]" aria-required="true">
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="application[email]" aria-required="true">
+            </div>
+            <div class="field">
+                <label for="phone">Phone Number (XXXXXXXXXXX)</label>
+                <input type="text" id="phone" name="application[phone]" aria-required="true">
+            </div>
+            <div class="field">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="application[location]" aria-required="true">
+            </div>
+            <div class="field">
+                <label for="linkedin">Linkedin</label>
+                <input type="text" id="linkedin" name="application[linkedin]" aria-required="true">
+            </div>
+            <div class="field">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="application[website]" aria-required="true">
+            </div>
+            <div class="field" id="gender_dropdown">
+                <label for="gender">Gender</label>
+                <select name="application[gender]" id="gender">
+                    <option>Please select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Decline To Self Identify">Decline To Self Identify</option>
+                </select>
+            </div>
+            <div id="submit" style="color:blue">
+                <span id="save">Submit</span>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
