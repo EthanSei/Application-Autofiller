@@ -10,6 +10,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             if (inputs[i].name == "name") inputs[i].value = fields.firstName + " " + fields.lastName;
             else if (inputs[i].name == "email") inputs[i].value = fields.email;
             else if (inputs[i].name == "phone") inputs[i].value = fields.phone;
+            else if (inputs[i].name == "urls[LinkedIn]") inputs[i].value = fields.linkedin;
         }
     }
 });

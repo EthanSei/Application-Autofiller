@@ -35,7 +35,7 @@ var fieldNames = ['firstName','lastName','email','phone','location','linkedin','
 
 chrome.storage.local.get(fieldNames, (fields) => {
     console.log("GETTING FIELDS");
-    if (fields != null) {
+    if (fields['firstName'] != null) {
         // alert("LOADED FIELDS");
         document.getElementById("first_name").value = fields['firstName'];
         document.getElementById("last_name").value = fields['lastName'];

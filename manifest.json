@@ -10,7 +10,10 @@
         "tabs"
     ],
     "content_scripts":[{
-        "js":["leverContent.js"],
-        "matches":["<all_urls>"]
+        "matches":["https://jobs.lever.co/*"],
+        "js":["leverContent.js"]
+    },{
+        "matches":["https://boards.greenhouse.io/*"],
+        "js":["greenHouseContent.js"]
     }]
 }
