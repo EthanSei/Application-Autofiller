@@ -6,7 +6,10 @@ document.getElementById("submit").addEventListener("click", function(event) {
         lastName : document.getElementById("last_name").value,
         email : document.getElementById("email").value,
         phone : document.getElementById("phone").value,
-        location : document.getElementById("location").value,
+        address : document.getElementById("address").value,
+        city : document.getElementById("city").value,
+        state : document.getElementById("state").value,
+        zip : document.getElementById("zip").value,
         linkedin : document.getElementById("linkedin").value,
         website : document.getElementById("website").value,
         gender : document.getElementById("gender").value,
@@ -16,7 +19,10 @@ document.getElementById("submit").addEventListener("click", function(event) {
                                 "lastName": fields.lastName,
                                 "email": fields.email,
                                 "phone": fields.phone,
-                                "location": fields.location,
+                                "address": fields.address,
+                                "city" : fields.city,
+                                "state" : fields.state,
+                                "zip" : fields.zip,
                                 "linkedin": fields.linkedin,
                                 "website": fields.website,
                                 "gender": fields.gender,
@@ -33,7 +39,7 @@ document.getElementById("submit").addEventListener("click", function(event) {
     });
 });
 
-var fieldNames = ['firstName','lastName','email','phone','location','linkedin','website','gender','race'];
+var fieldNames = ['firstName','lastName','email','phone','address','city','state','zip','linkedin','website','gender','race'];
 
 chrome.storage.local.get(fieldNames, (fields) => {
     console.log("GETTING FIELDS");
@@ -43,7 +49,10 @@ chrome.storage.local.get(fieldNames, (fields) => {
         document.getElementById("last_name").value = fields['lastName'];
         document.getElementById("email").value = fields['email'];
         document.getElementById("phone").value = fields['phone'];
-        document.getElementById("location").value = fields['location'];
+        document.getElementById("address").value = fields['address'];
+        document.getElementById("city").value = fields['city'];
+        document.getElementById("state").value = fields['state'];
+        document.getElementById("zip").value = fields['zip'];
         document.getElementById("linkedin").value = fields['linkedin'];
         document.getElementById("website").value = fields['website'];
         document.getElementById("gender").value = fields['gender'];

@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                 else if (inputs[i].id == "last_name") inputs[i].value = fields.lastName;
                 else if (inputs[i].id == "email") inputs[i].value = fields.email;
                 else if (inputs[i].id == "phone") inputs[i].value = fields.phone;
-                else if (inputs[i].id == "job_application_location") inputs[i].value = fields.location;
+                else if (inputs[i].id == "job_application_location") inputs[i].value = fields.city + ", " + fields.state;
             }
         }
 
