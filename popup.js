@@ -9,7 +9,8 @@ document.getElementById("submit").addEventListener("click", function(event) {
         location : document.getElementById("location").value,
         linkedin : document.getElementById("linkedin").value,
         website : document.getElementById("website").value,
-        gender : document.getElementById("gender").value
+        gender : document.getElementById("gender").value,
+        race : document.getElementById("race").value
     }
     chrome.storage.local.set({"firstName": fields.firstName,
                                 "lastName": fields.lastName,
@@ -18,7 +19,8 @@ document.getElementById("submit").addEventListener("click", function(event) {
                                 "location": fields.location,
                                 "linkedin": fields.linkedin,
                                 "website": fields.website,
-                                "gender": fields.gender
+                                "gender": fields.gender,
+                                "race" : fields.race
                             }, function() { alert("Saving: " + JSON.stringify(fields)); }
     );
 
@@ -31,7 +33,7 @@ document.getElementById("submit").addEventListener("click", function(event) {
     });
 });
 
-var fieldNames = ['firstName','lastName','email','phone','location','linkedin','website','gender'];
+var fieldNames = ['firstName','lastName','email','phone','location','linkedin','website','gender','race'];
 
 chrome.storage.local.get(fieldNames, (fields) => {
     console.log("GETTING FIELDS");
@@ -45,6 +47,7 @@ chrome.storage.local.get(fieldNames, (fields) => {
         document.getElementById("linkedin").value = fields['linkedin'];
         document.getElementById("website").value = fields['website'];
         document.getElementById("gender").value = fields['gender'];
+        document.getElementById("race").value = fields['race'];
     }
     else {
         // alert("NULL FIELDS");
